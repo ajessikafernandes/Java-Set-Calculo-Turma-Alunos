@@ -9,9 +9,9 @@ public class programa {
 
 	public static void main(String[] args) throws ParseException {
 
-		Set<Integer> a = new HashSet<>();
-		Set<Integer> b = new HashSet<>();
-		Set<Integer> c = new HashSet<>();
+		Set<Integer> c1 = new HashSet<>();
+		Set<Integer> c2 = new HashSet<>();
+		Set<Integer> c3 = new HashSet<>();
 
 		Scanner ler = new Scanner(System.in);
 
@@ -19,9 +19,9 @@ public class programa {
 		int qtd = ler.nextInt();
 
 		if (qtd != 0) {
-			System.out.print("Informe o código dos alunos: ");
+			System.out.print("Informe o cÃ³digo dos alunos: ");
 			for (int cont = 1; cont <= qtd; cont++) {
-				a.add(ler.nextInt());
+				c1.add(ler.nextInt());
 
 			}
 		}
@@ -31,9 +31,9 @@ public class programa {
 		System.out.print("Informe a quantidade de alunos do curso B: ");
 		int qtd2 = ler.nextInt();
 		if (qtd2 != 0) {
-			System.out.print("Informe o código dos alunos: ");
+			System.out.print("Informe o cÃ³digo dos alunos: ");
 			for (int cont = 1; cont <= qtd2; cont++) {
-				b.add(ler.nextInt());
+				c2.add(ler.nextInt());
 			}
 		}
 
@@ -43,17 +43,17 @@ public class programa {
 		int qtd3 = ler.nextInt();
 
 		if (qtd3 != 0) {
-			System.out.print("Informe o código dos alunos: ");
+			System.out.print("Informe o cÃ³digo dos alunos: ");
 			for (int cont = 1; cont <= qtd3; cont++) {
-				c.add(ler.nextInt());
+				c3.add(ler.nextInt());
 			}
 		}
 
 		System.out.println("");
 		
-		Set<Integer> totalAlunos = new HashSet<>(a);
-		totalAlunos.addAll(b);
-		totalAlunos.addAll(c);
+		Set<Integer> totalAlunos = new HashSet<>(c1);
+		totalAlunos.addAll(c2);
+		totalAlunos.addAll(c3);
 
 		System.out.println("Id de Alunos: " + totalAlunos);
 		System.out.println("Total de Alunos: " + totalAlunos.size());
